@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { TextField, Button, Autocomplete } from '@mui/material';
 import { useInView } from 'react-intersection-observer';
+import Shimmer from './Shimmer';
 
 const API_KEY = '2f3bd9fdb618c112bb3e571629fef076';
 
@@ -152,7 +153,7 @@ const App = () => {
           })}
         </div>
       </div>
-      {isLoading && <p>Loading...</p>}
+      {isLoading && <p><Shimmer /></p>}
       {!isLoading && photos.length > 0 && (
         <Button variant="contained" onClick={() => setPage((prevPage) => prevPage + 1)}>
           Load More
