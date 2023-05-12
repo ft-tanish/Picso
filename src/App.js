@@ -86,13 +86,6 @@ const App = () => {
     }
   };
 
-  const handleSuggestedQueryClick = (query) => {
-    setSearchQuery(query);
-    setPage(1);
-    setPhotos([]);
-    fetchPhotos();
-  };
-
   return (
     <div>
       <header>
